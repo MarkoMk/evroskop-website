@@ -1,0 +1,22 @@
+{
+  "name": "evroskop-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/server.js",
+    "build:css": "npx @tailwindcss/cli -i ./src/css/input.css -o ./public/styles.css",
+    "watch:css": "npx @tailwindcss/cli -i ./src/css/input.css -o ./public/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "nodemon": "^3.1.14",
+    "tailwindcss": "^4.3.3"
+  }
+}
