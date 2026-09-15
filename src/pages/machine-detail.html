@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="DURMA sheet metal machinery from Evroskop Group."
+    >
+
+    <title>DURMA Machine | Evroskop Group</title>
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+
+<body class="bg-white text-gray-900">
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <header class="border-b border-gray-200 bg-white">
+
+        <nav
+            class="mx-auto flex max-w-7xl items-center
+                   justify-between px-6 py-5 lg:px-8"
+            aria-label="Main navigation"
+        >
+
+            <a
+                href="/"
+                aria-label="Evroskop Group — Home"
+            >
+                <img
+                    src="/logo.svg"
+                    alt="Evroskop Group"
+                    class="h-12 w-auto"
+                >
+            </a>
+
+
+            <div class="hidden items-center gap-8 md:flex">
+
+                <a
+                    href="/robotics"
+                    class="font-semibold text-evroskop-dark
+                           transition hover:text-evroskop-blue"
+                >
+                    Robotics
+                </a>
+
+                <a
+                    href="/sheet-metal"
+                    class="font-semibold text-evroskop-blue"
+                >
+                    Sheet Metal
+                </a>
+
+                <a
+                    href="/#about"
+                    class="font-semibold text-evroskop-dark
+                           transition hover:text-evroskop-blue"
+                >
+                    About Us
+                </a>
+
+                <a
+                    href="/#contact"
+                    class="rounded-lg bg-evroskop-dark
+                           px-6 py-3 font-bold text-white
+                           transition hover:bg-evroskop-blue"
+                >
+                    Contact Us
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =================================================
+             BREADCRUMB
+             ================================================= -->
+
+        <div
+            class="mx-auto max-w-7xl px-6 pt-8 lg:px-8"
+        >
+
+            <nav
+                class="flex flex-wrap items-center gap-2
+                       text-sm text-gray-500"
+                aria-label="Breadcrumb"
+            >
+
+                <a
+                    href="/"
+                    class="transition hover:text-evroskop-blue"
+                >
+                    Home
+                </a>
+
+                <span>/</span>
+
+                <a
+                    href="/sheet-metal"
+                    class="transition hover:text-evroskop-blue"
+                >
+                    Sheet Metal
+                </a>
+
+                <span>/</span>
+
+                <span
+                    id="breadcrumb-model"
+                    class="text-gray-700"
+                ></span>
+
+            </nav>
+
+        </div>
+
+
+        <!-- =================================================
+             PRODUCT HERO
+             ================================================= -->
+
+        <section
+            class="mx-auto max-w-7xl
+                   px-6 py-10 lg:px-8"
+        >
+
+            <div
+                class="grid gap-12
+                       lg:grid-cols-[1.15fr_0.85fr]
+                       lg:gap-16"
+            >
+
+                <!-- Gallery -->
+                <div
+                    class="grid gap-4
+                           sm:grid-cols-[90px_1fr]"
+                >
+
+                    <!-- Thumbnails -->
+                    <div
+                        id="machine-thumbnails"
+                        class="order-2 flex gap-3
+                               overflow-x-auto
+                               sm:order-1 sm:flex-col"
+                    ></div>
+
+
+                    <!-- Main image -->
+                    <div
+                        class="order-1 relative
+                               overflow-hidden rounded-2xl
+                               border border-gray-200
+                               bg-gray-50
+                               sm:order-2"
+                    >
+
+                        <div
+                            class="flex aspect-square
+                                   items-center justify-center
+                                   p-8"
+                        >
+
+                            <img
+                                id="machine-main-image"
+                                src=""
+                                alt=""
+                                class="h-full w-full object-contain"
+                            >
+
+                        </div>
+
+
+                        <button
+                            id="gallery-previous"
+                            type="button"
+                            class="absolute left-4 top-1/2
+                                   flex h-10 w-10
+                                   -translate-y-1/2
+                                   items-center justify-center
+                                   rounded-full bg-white/90
+                                   text-xl font-bold
+                                   text-evroskop-dark shadow"
+                            aria-label="Previous image"
+                        >
+                            ‹
+                        </button>
+
+
+                        <button
+                            id="gallery-next"
+                            type="button"
+                            class="absolute right-4 top-1/2
+                                   flex h-10 w-10
+                                   -translate-y-1/2
+                                   items-center justify-center
+                                   rounded-full bg-white/90
+                                   text-xl font-bold
+                                   text-evroskop-dark shadow"
+                            aria-label="Next image"
+                        >
+                            ›
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Product information -->
+                <div class="lg:pt-4">
+
+                    <p
+                        id="machine-category"
+                        class="inline-flex rounded-full
+                               bg-evroskop-blue/10
+                               px-4 py-2
+                               text-xs font-bold uppercase
+                               tracking-[0.14em]
+                               text-evroskop-blue"
+                    ></p>
+
+
+                    <p
+                        class="mt-6 text-xs font-bold uppercase
+                               tracking-[0.2em]
+                               text-evroskop-blue"
+                    >
+                        DURMA
+                    </p>
+
+
+                    <h1
+                        id="machine-model"
+                        class="mt-2 text-4xl font-bold
+                               tracking-tight
+                               text-evroskop-dark
+                               sm:text-5xl"
+                    ></h1>
+
+
+                    <p
+                        id="machine-short-description"
+                        class="mt-4 text-lg
+                               leading-8 text-gray-600"
+                    ></p>
+
+
+                    <p
+                        id="machine-description"
+                        class="mt-5 leading-7
+                               text-gray-600"
+                    ></p>
+
+
+                    <!-- Dynamic key specifications -->
+                    <div
+                        id="machine-key-specs"
+                        class="mt-8 grid grid-cols-3
+                               divide-x divide-gray-200
+                               border-y border-gray-200
+                               py-5 text-center"
+                    ></div>
+
+
+                    <!-- CTAs -->
+                    <div class="mt-8 grid gap-3">
+
+                        <a
+                            id="machine-quote"
+                            href="#"
+                            class="inline-flex items-center
+                                   justify-center rounded-lg
+                                   bg-evroskop-dark
+                                   px-6 py-3.5
+                                   font-semibold text-white
+                                   transition
+                                   hover:bg-evroskop-blue"
+                        >
+                            Request a Quote
+                        </a>
+
+
+                        <a
+                            id="machine-datasheet"
+                            href="#"
+                            class="hidden items-center
+                                   justify-center rounded-lg
+                                   border-2 border-evroskop-dark
+                                   px-6 py-3
+                                   font-semibold text-evroskop-dark
+                                   transition
+                                   hover:bg-evroskop-dark
+                                   hover:text-white"
+                        >
+                            Download Datasheet
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MACHINE DETAILS
+             ================================================= -->
+
+        <section
+            class="border-t border-gray-100 bg-gray-50"
+        >
+
+            <div
+                class="mx-auto max-w-7xl
+                       px-6 py-20 lg:px-8"
+            >
+
+                <!-- Overview -->
+                <div
+                    class="grid gap-12
+                           lg:grid-cols-[1.1fr_0.9fr]"
+                >
+
+                    <div>
+
+                        <p
+                            class="text-sm font-bold uppercase
+                                   tracking-[0.2em]
+                                   text-evroskop-blue"
+                        >
+                            Overview
+                        </p>
+
+                        <h2
+                            class="mt-3 text-3xl font-bold
+                                   text-evroskop-dark"
+                        >
+                            Built for modern sheet metal production.
+                        </h2>
+
+                        <p
+                            id="machine-overview"
+                            class="mt-6 text-base
+                                   leading-7 text-gray-600"
+                        ></p>
+
+                    </div>
+
+
+                    <!-- Applications -->
+                    <div
+                        class="rounded-2xl
+                               border border-gray-200
+                               bg-white p-7"
+                    >
+
+                        <h3
+                            class="text-xl font-bold
+                                   text-evroskop-dark"
+                        >
+                            Typical Applications
+                        </h3>
+
+                        <div
+                            id="machine-applications"
+                            class="mt-5 flex flex-wrap gap-3"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Specifications -->
+                <div
+                    class="mt-16 grid gap-12
+                           lg:grid-cols-[1fr_0.8fr]"
+                >
+
+                    <div>
+
+                        <h2
+                            class="text-2xl font-bold
+                                   text-evroskop-dark"
+                        >
+                            Technical Specifications
+                        </h2>
+
+                        <div
+                            id="machine-specifications"
+                            class="mt-6 overflow-hidden
+                                   rounded-xl
+                                   border border-gray-200
+                                   bg-white"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- Help CTA -->
+                    <div
+                        class="rounded-2xl
+                               bg-evroskop-dark
+                               p-8 text-white"
+                    >
+
+                        <p
+                            class="text-xs font-bold uppercase
+                                   tracking-[0.18em]
+                                   text-white/60"
+                        >
+                            Machine Selection
+                        </p>
+
+                        <h2
+                            class="mt-3 text-2xl font-bold"
+                        >
+                            Need help selecting the right configuration?
+                        </h2>
+
+                        <p
+                            class="mt-4 leading-7
+                                   text-white/80"
+                        >
+                            Tell us your material, thickness,
+                            dimensions, production capacity,
+                            and required process. Evroskop can help
+                            determine the right DURMA machine
+                            and configuration for your production.
+                        </p>
+
+                        <a
+                            id="machine-contact"
+                            href="mailto:evroskop@evroskop.com"
+                            class="mt-7 inline-flex
+                                   rounded-lg bg-white
+                                   px-5 py-3
+                                   font-semibold
+                                   text-evroskop-dark"
+                        >
+                            Discuss Your Application
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/data/sheet-metal-products.js"></script>
+    <script src="/js/machine-detail.js"></script>
+
+</body>
+</html>

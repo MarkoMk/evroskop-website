@@ -1,0 +1,126 @@
+python3 <<'PY'
+from pathlib import Path
+import re
+
+path = Path("src/data/products.js")
+
+text = path.read_text(encoding="utf-8")
+
+thumbnails = {
+    "ER7-910-MI-PI-C": "ER7-910-MI-PI-C.jpeg",
+    "ER7-910-MI": "ER7-910-MI.png",
+    "ER8-720-MI": "ER8-720-MI.jpg",
+
+    "ER3-400-SR": "ER3-400-SR.jpg",
+    "ER10-600-SR": "ER10-600-SR.jpg",
+    "ER10-700-SR": "ER10-700-SR.jpg",
+
+    "ER20B-1760": "ER20B-1760.jpg",
+    "ER20/10-2000-HI": "ER20-10-2000-HI.webp",
+    "ER20-2300-HI": "ER20-2300-HI.webp",
+
+    "ER270-2850": "ER270-2850.jpeg",
+    "ER280-3200": "ER280-3200.jpg",
+
+    "ER350-3300": "ER350-3300.jpeg",
+    "ER350-3300-5": "ER350-3300-5.webp",
+    "ER500-2800": "ER500-2800.jpg",
+
+    "UNO-220-3100-HR": "UNO-220-3100-HR.jpg",
+
+    "S3-60 Eco": "S3-60 Eco.jpeg",
+    "S3-60 Pro": "S3-60 Pro.jpeg",
+    "S5-90 Pro": "S5-90 Pro.jpg",
+
+    "ER50B-2100-F": "ER50B-2100-F.webp",
+
+    "ER45-2200-BD": "ER45-2200-BD.jpg",
+    "ER80B-2565-BD": "ER80B-2565-BD.webp",
+    "ER130-2865-BD": "ER130-2865-BD.jpg",
+
+    "ER60-2000-PL": "ER60-2000-PL.jpg",
+    "ER120-2400-PL": "ER120-2400-PL.jpg",
+    "ER180-3100-PL": "ER180-3100-PL.webp",
+
+    "ER15-1520-PR": "ER15-1520-PR.jpg",
+
+    "QE Arc Welding Cell": "QE Arc Welding Cell.jpeg",
+    "QWAS Arc Welding Cell": "QWAS Arc Welding Cell.jpeg",
+    "EWAS Arc Welding Cell": "EWAS Arc Welding Cell.jpeg",
+
+    "Seventh Axis": "Seventh Axis.webp"
+}
+
+
+# Remove existing ESTUN-thumbnail properties first.
+# This makes the script safe to run again.
+text = re.sub(
+    r'\n\s*thumbnail:\s*"/images/ESTUN-thumbnail/[^"]+",',
+    "",
+    text
+)
+
+
+updated = []
+missing = []
+
+
+for model, filename in thumbnails.items():
+
+    pattern = (
+        rf'(^\s*model:\s*"{re.escape(model)}",\s*$)'
+    )
+
+    replacement = (
+        rf'\1\n\n'
+        rf'        thumbnail: '
+        rf'"/images/ESTUN-thumbnail/{filename}",'
+    )
+
+    text, count = re.subn(
+        pattern,
+        replacement,
+        text,
+        count=1,
+        flags=re.MULTILINE
+    )
+
+
+    if count == 1:
+        updated.append(model)
+    else:
+        missing.append(model)
+
+
+path.write_text(
+    text,
+    encoding="utf-8"
+)
+
+
+print()
+print("======================================")
+print(" ESTUN THUMBNAIL UPDATE COMPLETE")
+print("======================================")
+print()
+
+print(f"Updated: {len(updated)} products")
+
+for model in updated:
+    print(f"  ✓ {model}")
+
+
+if missing:
+
+    print()
+    print("Models NOT found in products.js:")
+
+    for model in missing:
+        print(f"  ✗ {model}")
+
+
+print()
+print("File updated:")
+print("src/data/products.js")
+print()
+PY

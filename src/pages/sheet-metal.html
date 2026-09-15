@@ -2,7 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Evroskop Group provides DURMA sheet metal machinery, automation, integration, and complete production solutions."
+    >
 
     <title>Sheet Metal Fabrication | Evroskop Group</title>
 
@@ -11,19 +20,1341 @@
 
 <body class="bg-white text-gray-900">
 
-    <main class="p-10">
-        <a href="/" class="underline">
-            ← Back to Homepage
-        </a>
 
-        <h1 class="mt-8 text-4xl font-bold">
-            Sheet Metal Fabrication
-        </h1>
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
 
-        <p class="mt-4 text-lg">
-            Durmazlar machines for cutting, bending, stamping and shearing applications.
-        </p>
+    <header class="border-b border-gray-200 bg-white">
+
+        <nav
+            class="mx-auto flex max-w-7xl items-center
+                   justify-between px-6 py-5 lg:px-8"
+            aria-label="Main navigation"
+        >
+
+            <!-- Logo -->
+            <a
+                href="/"
+                class="flex items-center"
+                aria-label="Evroskop Group — Home"
+            >
+                <img
+                    src="/logo.svg"
+                    alt="Evroskop Group"
+                    class="h-12 w-auto"
+                >
+            </a>
+
+
+            <!-- Desktop navigation -->
+            <div class="hidden items-center gap-8 md:flex">
+
+                <!-- Robotics -->
+                <a
+                    href="/robotics"
+                    class="group relative py-2 text-sm font-semibold
+                           text-evroskop-dark
+                           transition-colors duration-200
+                           hover:text-evroskop-blue"
+                >
+                    Robotics
+
+                    <span
+                        class="absolute bottom-0 left-0 h-0.5 w-0
+                               bg-evroskop-blue
+                               transition-all duration-300
+                               group-hover:w-full"
+                        aria-hidden="true"
+                    ></span>
+                </a>
+
+
+                <!-- Sheet Metal -->
+                <a
+                    href="/sheet-metal"
+                    class="group relative py-2 text-sm font-semibold
+                           text-evroskop-blue"
+                    aria-current="page"
+                >
+                    Sheet Metal
+
+                    <span
+                        class="absolute bottom-0 left-0 h-0.5 w-full
+                               bg-evroskop-blue"
+                        aria-hidden="true"
+                    ></span>
+                </a>
+
+
+                <!-- About -->
+                <a
+                    href="/#about"
+                    class="group relative py-2 text-sm font-semibold
+                           text-evroskop-dark
+                           transition-colors duration-200
+                           hover:text-evroskop-blue"
+                >
+                    About Us
+
+                    <span
+                        class="absolute bottom-0 left-0 h-0.5 w-0
+                               bg-evroskop-blue
+                               transition-all duration-300
+                               group-hover:w-full"
+                        aria-hidden="true"
+                    ></span>
+                </a>
+
+
+                <!-- Contact -->
+                <a
+                    href="/#contact"
+                    class="rounded-lg bg-evroskop-dark px-6 py-3
+                           text-sm font-bold text-white
+                           shadow-sm transition-all duration-200
+                           hover:-translate-y-0.5
+                           hover:bg-evroskop-blue
+                           hover:shadow-md"
+                >
+                    Contact Us
+                </a>
+
+            </div>
+
+
+            <!-- Mobile menu button -->
+            <button
+                type="button"
+                id="mobile-menu-button"
+                class="inline-flex items-center justify-center
+                       rounded-lg p-2 text-gray-700
+                       hover:bg-gray-100 md:hidden"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+                </svg>
+            </button>
+
+        </nav>
+
+
+        <!-- Mobile navigation -->
+        <div
+            id="mobile-menu"
+            class="hidden border-t border-gray-200
+                   bg-white md:hidden"
+        >
+
+            <div class="space-y-1 px-6 py-4">
+
+                <a
+                    href="/robotics"
+                    class="block rounded-lg px-4 py-3
+                           text-base font-medium text-gray-700
+                           hover:bg-gray-50"
+                >
+                    Robotics
+                </a>
+
+                <a
+                    href="/sheet-metal"
+                    class="block rounded-lg bg-evroskop-blue/10
+                           px-4 py-3 text-base font-semibold
+                           text-evroskop-blue"
+                    aria-current="page"
+                >
+                    Sheet Metal
+                </a>
+
+                <a
+                    href="/#about"
+                    class="block rounded-lg px-4 py-3
+                           text-base font-medium text-gray-700
+                           hover:bg-gray-50"
+                >
+                    About Us
+                </a>
+
+                <a
+                    href="/#contact"
+                    class="block rounded-lg bg-evroskop-dark
+                           px-4 py-3 text-center font-semibold
+                           text-white hover:bg-evroskop-blue"
+                >
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             SHEET METAL HERO
+             ================================================= -->
+
+        <section
+            class="relative overflow-hidden"
+            aria-labelledby="sheet-metal-hero-heading"
+        >
+
+            <div
+                class="absolute right-0 top-0 -z-10
+                       h-full w-1/2
+                       bg-gradient-to-l
+                       from-evroskop-blue/5
+                       to-transparent"
+                aria-hidden="true"
+            ></div>
+
+
+            <div
+                class="mx-auto grid max-w-7xl items-center
+                       gap-12 px-6 py-16
+                       lg:grid-cols-[0.9fr_1.1fr]
+                       lg:gap-16 lg:px-8 lg:py-20"
+            >
+
+                <!-- Left content -->
+                <div>
+
+                    <div
+                        class="mb-6 inline-flex items-center gap-2
+                               rounded-full
+                               border border-evroskop-blue/20
+                               bg-evroskop-blue/5
+                               px-4 py-2"
+                    >
+
+                        <span
+                            class="h-2 w-2 rounded-full
+                                   bg-evroskop-blue"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span
+                            class="text-xs font-bold uppercase
+                                   tracking-[0.18em]
+                                   text-evroskop-blue"
+                        >
+                            DURMA Sheet Metal Machinery
+                        </span>
+
+                    </div>
+
+
+                    <h1
+                        id="sheet-metal-hero-heading"
+                        class="max-w-2xl text-4xl font-bold
+                               leading-[1.08] tracking-tight
+                               text-evroskop-dark
+                               sm:text-5xl lg:text-[3.5rem]"
+                    >
+                        Sheet Metal Fabrication
+
+                        <span
+                            class="block text-evroskop-blue"
+                        >
+                            Technology for Modern Production.
+                        </span>
+                    </h1>
+
+
+                    <p
+                        class="mt-6 max-w-xl
+                               text-lg leading-8
+                               text-gray-600"
+                    >
+                        From cutting and bending to automated
+                        production systems, Evroskop provides
+                        DURMA sheet metal machinery for demanding
+                        industrial applications.
+                    </p>
+
+
+                    <p
+                        class="mt-4 max-w-xl
+                               text-base leading-7
+                               text-gray-600"
+                    >
+                        We help manufacturers select, integrate,
+                        and implement the right equipment around
+                        production requirements, capacity, automation,
+                        and long-term performance.
+                    </p>
+
+
+                    <div
+                        class="mt-8 flex flex-col gap-4
+                               sm:flex-row"
+                    >
+
+                        <a
+                            href="#machine-categories"
+                            class="inline-flex items-center
+                                   justify-center rounded-lg
+                                   bg-evroskop-dark
+                                   px-6 py-3.5
+                                   text-base font-semibold
+                                   text-white shadow-sm
+                                   transition duration-200
+                                   hover:-translate-y-0.5
+                                   hover:bg-evroskop-blue
+                                   hover:shadow-md"
+                        >
+                            Explore Machinery
+                        </a>
+
+
+                        <a
+                            href="mailto:evroskop@evroskop.com?subject=Sheet%20Metal%20Machinery%20Inquiry"
+                            class="inline-flex items-center
+                                   justify-center rounded-lg
+                                   border-2 border-evroskop-dark
+                                   px-6 py-3
+                                   text-base font-semibold
+                                   text-evroskop-dark
+                                   transition duration-200
+                                   hover:bg-evroskop-dark
+                                   hover:text-white"
+                        >
+                            Discuss Your Requirements
+                        </a>
+
+                    </div>
+
+
+                    <!-- Capabilities -->
+                    <div
+                        class="mt-10 grid max-w-xl
+                               grid-cols-2 gap-x-6 gap-y-4"
+                    >
+
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="flex h-6 w-6 shrink-0
+                                       items-center justify-center
+                                       rounded-full
+                                       bg-evroskop-blue/10
+                                       text-evroskop-blue"
+                            >
+                                ✓
+                            </span>
+
+                            <span
+                                class="text-sm font-semibold
+                                       text-gray-700"
+                            >
+                                Machine Supply
+                            </span>
+                        </div>
+
+
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="flex h-6 w-6 shrink-0
+                                       items-center justify-center
+                                       rounded-full
+                                       bg-evroskop-blue/10
+                                       text-evroskop-blue"
+                            >
+                                ✓
+                            </span>
+
+                            <span
+                                class="text-sm font-semibold
+                                       text-gray-700"
+                            >
+                                Application Support
+                            </span>
+                        </div>
+
+
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="flex h-6 w-6 shrink-0
+                                       items-center justify-center
+                                       rounded-full
+                                       bg-evroskop-blue/10
+                                       text-evroskop-blue"
+                            >
+                                ✓
+                            </span>
+
+                            <span
+                                class="text-sm font-semibold
+                                       text-gray-700"
+                            >
+                                Automation Integration
+                            </span>
+                        </div>
+
+
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="flex h-6 w-6 shrink-0
+                                       items-center justify-center
+                                       rounded-full
+                                       bg-evroskop-blue/10
+                                       text-evroskop-blue"
+                            >
+                                ✓
+                            </span>
+
+                            <span
+                                class="text-sm font-semibold
+                                       text-gray-700"
+                            >
+                                Technical Support
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right visual -->
+                <div class="relative">
+
+                    <div
+                        class="absolute -inset-6 -z-10
+                               rounded-[2rem]
+                               bg-gradient-to-br
+                               from-evroskop-blue/10
+                               via-transparent
+                               to-evroskop-dark/5"
+                        aria-hidden="true"
+                    ></div>
+
+
+                    <div
+                        class="relative min-h-[440px]
+                               overflow-hidden rounded-2xl
+                               bg-gray-50 shadow-xl
+                               lg:min-h-[540px]"
+                    >
+
+                        <img
+                            src="/images/hero-durma-robot.png"
+                            alt="DURMA automated sheet metal bending system"
+                            class="absolute inset-0
+                                   h-full w-full
+                                   object-contain p-8"
+                        >
+
+
+                        <div
+                            class="absolute bottom-6 left-6 right-6"
+                        >
+
+                            <div
+                                class="inline-flex items-center
+                                       rounded-lg bg-white/90
+                                       px-4 py-3
+                                       shadow-lg backdrop-blur-sm"
+                            >
+
+                                <div>
+                                    <p
+                                        class="text-xs font-bold
+                                               uppercase
+                                               tracking-[0.15em]
+                                               text-evroskop-blue"
+                                    >
+                                        DURMA
+                                    </p>
+
+                                    <p
+                                        class="mt-1 text-sm
+                                               font-semibold
+                                               text-evroskop-dark"
+                                    >
+                                        Sheet metal machinery and automation
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MACHINE CATEGORIES
+             ================================================= -->
+
+        <section
+            id="machine-categories"
+            class="border-t border-gray-100 bg-gray-50"
+            aria-labelledby="machine-categories-heading"
+        >
+
+            <div
+                class="mx-auto max-w-7xl
+                       px-6 py-20 lg:px-8 lg:py-24"
+            >
+
+                <!-- Heading -->
+                <div class="max-w-3xl">
+
+                    <p
+                        class="text-sm font-bold uppercase
+                               tracking-[0.2em]
+                               text-evroskop-blue"
+                    >
+                        Machine Categories
+                    </p>
+
+                    <h2
+                        id="machine-categories-heading"
+                        class="mt-3 text-3xl font-bold
+                               tracking-tight
+                               text-evroskop-dark
+                               sm:text-4xl"
+                    >
+                        Equipment for complete sheet metal production.
+                    </h2>
+
+                    <p
+                        class="mt-5 max-w-2xl
+                               text-base leading-7
+                               text-gray-600"
+                    >
+                        From standalone machines to automated production
+                        systems, the DURMA range covers the key processes
+                        required for modern sheet metal manufacturing.
+                    </p>
+
+                </div>
+
+
+                <!-- Category grid -->
+                <div
+                    class="mt-12 grid gap-6
+                           sm:grid-cols-2
+                           lg:grid-cols-3"
+                >
+
+                    <!-- Press Brakes -->
+                    <article
+                        class="group rounded-2xl
+                               border border-gray-200
+                               bg-white p-7 shadow-sm
+                               transition duration-300
+                               hover:-translate-y-1
+                               hover:border-evroskop-blue/40
+                               hover:shadow-lg"
+                    >
+
+                        <div
+                            class="flex h-12 w-12 items-center
+                                   justify-center rounded-xl
+                                   bg-evroskop-blue/10
+                                   text-evroskop-blue"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                class="h-6 w-6"
+                            >
+                                <path d="M3 6h18" />
+                                <path d="M5 10h14" />
+                                <path d="M7 14l5 5 5-5" />
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold
+                                   text-evroskop-dark"
+                        >
+                            Press Brakes
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6
+                                   text-gray-600"
+                        >
+                            Precision bending solutions for a wide range
+                            of sheet metal production requirements.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Laser Cutting -->
+                    <article
+                        class="group rounded-2xl
+                               border border-gray-200
+                               bg-white p-7 shadow-sm
+                               transition duration-300
+                               hover:-translate-y-1
+                               hover:border-evroskop-blue/40
+                               hover:shadow-lg"
+                    >
+
+                        <div
+                            class="flex h-12 w-12 items-center
+                                   justify-center rounded-xl
+                                   bg-evroskop-blue/10
+                                   text-evroskop-blue"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                class="h-6 w-6"
+                            >
+                                <path d="M12 2v8" />
+                                <path d="M8 10h8" />
+                                <path d="M10 14l2 6 2-6" />
+                                <path d="M5 21h14" />
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold
+                                   text-evroskop-dark"
+                        >
+                            Laser Cutting
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6
+                                   text-gray-600"
+                        >
+                            High-performance fiber laser cutting systems
+                            for precise and productive sheet processing.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Bending Centers -->
+                    <article
+                        class="group rounded-2xl
+                               border border-gray-200
+                               bg-white p-7 shadow-sm
+                               transition duration-300
+                               hover:-translate-y-1
+                               hover:border-evroskop-blue/40
+                               hover:shadow-lg"
+                    >
+
+                        <div
+                            class="flex h-12 w-12 items-center
+                                   justify-center rounded-xl
+                                   bg-evroskop-blue/10
+                                   text-evroskop-blue"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                class="h-6 w-6"
+                            >
+                                <rect x="4" y="5" width="16" height="14" rx="2" />
+                                <path d="M8 9h8" />
+                                <path d="M9 13l3 3 3-3" />
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold
+                                   text-evroskop-dark"
+                        >
+                            Bending Centers
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6
+                                   text-gray-600"
+                        >
+                            Automated bending systems for consistent
+                            and efficient panel production.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Plasma Cutting -->
+                    <article
+                        class="group rounded-2xl
+                               border border-gray-200
+                               bg-white p-7 shadow-sm
+                               transition duration-300
+                               hover:-translate-y-1
+                               hover:border-evroskop-blue/40
+                               hover:shadow-lg"
+                    >
+
+                        <div
+                            class="flex h-12 w-12 items-center
+                                   justify-center rounded-xl
+                                   bg-evroskop-blue/10
+                                   text-evroskop-blue"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                class="h-6 w-6"
+                            >
+                                <path d="M12 2v7" />
+                                <path d="M8 9h8" />
+                                <path d="M10 13l2 6 2-6" />
+                                <path d="M4 21h16" />
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold
+                                   text-evroskop-dark"
+                        >
+                            Plasma Cutting
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6
+                                   text-gray-600"
+                        >
+                            Robust plasma cutting systems for demanding
+                            plate and sheet processing applications.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Guillotine Shears -->
+                    <article
+                        class="group rounded-2xl
+                               border border-gray-200
+                               bg-white p-7 shadow-sm
+                               transition duration-300
+                               hover:-translate-y-1
+                               hover:border-evroskop-blue/40
+                               hover:shadow-lg"
+                    >
+
+                        <div
+                            class="flex h-12 w-12 items-center
+                                   justify-center rounded-xl
+                                   bg-evroskop-blue/10
+                                   text-evroskop-blue"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                class="h-6 w-6"
+                            >
+                                <path d="M4 7h16" />
+                                <path d="M4 17h16" />
+                                <path d="M8 7l8 10" />
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold
+                                   text-evroskop-dark"
+                        >
+                            Guillotine Shears
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6
+                                   text-gray-600"
+                        >
+                            Accurate and reliable shearing machines
+                            for sheet metal cutting operations.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Cylinder Bending -->
+                    <article
+                        class="group rounded-2xl
+                               border border-gray-200
+                               bg-white p-7 shadow-sm
+                               transition duration-300
+                               hover:-translate-y-1
+                               hover:border-evroskop-blue/40
+                               hover:shadow-lg"
+                    >
+
+                        <div
+                            class="flex h-12 w-12 items-center
+                                   justify-center rounded-xl
+                                   bg-evroskop-blue/10
+                                   text-evroskop-blue"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                class="h-6 w-6"
+                            >
+                                <circle cx="8" cy="12" r="3" />
+                                <circle cx="16" cy="12" r="3" />
+                                <path d="M5 7h14" />
+                                <path d="M5 17h14" />
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold
+                                   text-evroskop-dark"
+                        >
+                            Cylinder Bending
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6
+                                   text-gray-600"
+                        >
+                            Plate and sheet rolling solutions for
+                            cylindrical and curved component production.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Punch Presses -->
+                    <article
+                        class="group rounded-2xl
+                               border border-gray-200
+                               bg-white p-7 shadow-sm
+                               transition duration-300
+                               hover:-translate-y-1
+                               hover:border-evroskop-blue/40
+                               hover:shadow-lg"
+                    >
+
+                        <div
+                            class="flex h-12 w-12 items-center
+                                   justify-center rounded-xl
+                                   bg-evroskop-blue/10
+                                   text-evroskop-blue"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                class="h-6 w-6"
+                            >
+                                <rect x="5" y="4" width="14" height="16" rx="2" />
+                                <path d="M12 4v8" />
+                                <circle cx="12" cy="15" r="2" />
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold
+                                   text-evroskop-dark"
+                        >
+                            Punch Presses
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6
+                                   text-gray-600"
+                        >
+                            Punching solutions for high-productivity
+                            sheet metal processing.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Loading & Unloading -->
+                    <article
+                        class="group rounded-2xl
+                               border border-gray-200
+                               bg-white p-7 shadow-sm
+                               transition duration-300
+                               hover:-translate-y-1
+                               hover:border-evroskop-blue/40
+                               hover:shadow-lg"
+                    >
+
+                        <div
+                            class="flex h-12 w-12 items-center
+                                   justify-center rounded-xl
+                                   bg-evroskop-blue/10
+                                   text-evroskop-blue"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                class="h-6 w-6"
+                            >
+                                <path d="M4 18h16" />
+                                <rect x="6" y="10" width="12" height="6" rx="1" />
+                                <path d="M12 4v6" />
+                                <path d="M9 7l3-3 3 3" />
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold
+                                   text-evroskop-dark"
+                        >
+                            Loading & Unloading
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6
+                                   text-gray-600"
+                        >
+                            Automated material handling and storage
+                            systems for higher machine utilization.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Special Projects -->
+                    <article
+                        class="group rounded-2xl
+                               border border-evroskop-blue/30
+                               bg-gradient-to-br
+                               from-evroskop-dark
+                               to-evroskop-blue
+                               p-7 shadow-sm
+                               transition duration-300
+                               hover:-translate-y-1
+                               hover:shadow-xl"
+                    >
+
+                        <div
+                            class="flex h-12 w-12 items-center
+                                   justify-center rounded-xl
+                                   bg-white/15 text-white"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                class="h-6 w-6"
+                            >
+                                <circle cx="12" cy="12" r="3" />
+                                <path d="M12 2v4" />
+                                <path d="M12 18v4" />
+                                <path d="M2 12h4" />
+                                <path d="M18 12h4" />
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold text-white"
+                        >
+                            Special Projects
+                        </h3>
+
+                        <p
+                            class="mt-3 text-sm leading-6 text-white/80"
+                        >
+                            Custom machinery, automation, and production
+                            solutions developed around unique requirements.
+                        </p>
+
+                        <a
+                            href="mailto:evroskop@evroskop.com?subject=Special%20Sheet%20Metal%20Project"
+                            class="mt-6 inline-flex items-center gap-2
+                                   text-sm font-semibold text-white"
+                        >
+                            Discuss Your Project
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================================
+     DURMA MACHINE RANGE
+     ===================================================== -->
+
+<section
+    id="machines"
+    class="border-t border-gray-100 bg-white"
+    aria-labelledby="machines-heading"
+>
+
+    <div
+        class="mx-auto max-w-7xl
+               px-6 py-20 lg:px-8 lg:py-24"
+    >
+
+        <!-- Heading -->
+        <div class="max-w-3xl">
+
+            <p
+                class="text-sm font-bold uppercase
+                       tracking-[0.2em]
+                       text-evroskop-blue"
+            >
+                DURMA Machine Range
+            </p>
+
+
+            <h2
+                id="machines-heading"
+                class="mt-3 text-3xl font-bold
+                       tracking-tight
+                       text-evroskop-dark
+                       sm:text-4xl"
+            >
+                Machines for every production requirement.
+            </h2>
+
+
+            <p
+                class="mt-5 max-w-2xl
+                       text-base leading-7
+                       text-gray-600"
+            >
+                Browse DURMA machinery by production process.
+                Exact configurations and technical specifications
+                will be added as we complete each machine in the
+                catalogue.
+            </p>
+
+        </div>
+
+
+        <!-- =============================================
+             CATALOGUE CONTROLS
+             ============================================= -->
+
+        <div class="mt-8">
+
+            <!-- Filters -->
+            <div
+                id="machine-category-filters"
+                class="flex flex-wrap gap-3"
+                aria-label="DURMA machine categories"
+            >
+
+                <button
+                    type="button"
+                    data-machine-category="all"
+                    class="rounded-full
+                           bg-evroskop-dark
+                           px-4 py-2
+                           text-xs font-bold uppercase
+                           tracking-[0.12em]
+                           text-white"
+                >
+                    All
+                </button>
+
+
+                <button
+                    type="button"
+                    data-machine-category="press-brakes"
+                    class="rounded-full
+                           border border-gray-300
+                           bg-white px-4 py-2
+                           text-xs font-bold uppercase
+                           tracking-[0.12em]
+                           text-gray-600"
+                >
+                    Press Brakes
+                </button>
+
+
+                <button
+                    type="button"
+                    data-machine-category="laser-cutting"
+                    class="rounded-full
+                           border border-gray-300
+                           bg-white px-4 py-2
+                           text-xs font-bold uppercase
+                           tracking-[0.12em]
+                           text-gray-600"
+                >
+                    Laser Cutting
+                </button>
+
+
+                <button
+                    type="button"
+                    data-machine-category="bending-centers"
+                    class="rounded-full
+                           border border-gray-300
+                           bg-white px-4 py-2
+                           text-xs font-bold uppercase
+                           tracking-[0.12em]
+                           text-gray-600"
+                >
+                    Bending Centers
+                </button>
+
+
+                <button
+                    type="button"
+                    data-machine-category="plasma-cutting"
+                    class="rounded-full
+                           border border-gray-300
+                           bg-white px-4 py-2
+                           text-xs font-bold uppercase
+                           tracking-[0.12em]
+                           text-gray-600"
+                >
+                    Plasma
+                </button>
+
+
+                <button
+                    type="button"
+                    data-machine-category="guillotine-shears"
+                    class="rounded-full
+                           border border-gray-300
+                           bg-white px-4 py-2
+                           text-xs font-bold uppercase
+                           tracking-[0.12em]
+                           text-gray-600"
+                >
+                    Shears
+                </button>
+
+
+                <button
+                    type="button"
+                    data-machine-category="cylinder-bending"
+                    class="rounded-full
+                           border border-gray-300
+                           bg-white px-4 py-2
+                           text-xs font-bold uppercase
+                           tracking-[0.12em]
+                           text-gray-600"
+                >
+                    Cylinder Bending
+                </button>
+
+
+                <button
+                    type="button"
+                    data-machine-category="punch-presses"
+                    class="rounded-full
+                           border border-gray-300
+                           bg-white px-4 py-2
+                           text-xs font-bold uppercase
+                           tracking-[0.12em]
+                           text-gray-600"
+                >
+                    Punch Presses
+                </button>
+
+
+                <button
+                    type="button"
+                    data-machine-category="automation"
+                    class="rounded-full
+                           border border-gray-300
+                           bg-white px-4 py-2
+                           text-xs font-bold uppercase
+                           tracking-[0.12em]
+                           text-gray-600"
+                >
+                    Automation
+                </button>
+
+
+                <button
+                    type="button"
+                    data-machine-category="special-projects"
+                    class="rounded-full
+                           border border-gray-300
+                           bg-white px-4 py-2
+                           text-xs font-bold uppercase
+                           tracking-[0.12em]
+                           text-gray-600"
+                >
+                    Special Projects
+                </button>
+
+            </div>
+
+
+            <!-- Search -->
+            <div
+                class="mt-6 flex justify-end"
+            >
+
+                <div class="relative w-full sm:w-80">
+
+                    <svg
+                        class="pointer-events-none
+                               absolute left-4 top-1/2
+                               h-4 w-4
+                               -translate-y-1/2
+                               text-gray-400"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+                        <circle
+                            cx="11"
+                            cy="11"
+                            r="8"
+                        ></circle>
+
+                        <path
+                            d="m21 21-4.35-4.35"
+                        ></path>
+                    </svg>
+
+
+                    <input
+                        id="machine-search"
+                        type="search"
+                        placeholder="Search machines..."
+                        class="w-full rounded-lg
+                               border border-gray-300
+                               bg-white py-3
+                               pl-11 pr-4
+                               text-sm text-gray-800
+                               outline-none transition
+                               focus:border-evroskop-blue
+                               focus:ring-2
+                               focus:ring-evroskop-blue/20"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =============================================
+             DYNAMIC MACHINE GRID
+             ============================================= -->
+
+        <div
+            id="machine-grid"
+            class="mt-10 grid gap-6
+                   md:grid-cols-2
+                   xl:grid-cols-3"
+        ></div>
+
+
+        <!-- Bottom CTA -->
+        <div
+            class="mt-12 flex flex-col gap-5
+                   rounded-2xl
+                   border border-gray-200
+                   bg-gray-50 p-8
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between"
+        >
+
+            <div>
+
+                <h3
+                    class="text-xl font-bold
+                           text-evroskop-dark"
+                >
+                    Need help choosing the right machine?
+                </h3>
+
+
+                <p
+                    class="mt-2 max-w-2xl
+                           text-sm leading-6
+                           text-gray-600"
+                >
+                    Tell us your material, thickness, dimensions,
+                    production volume, and process requirements.
+                    Evroskop can help identify the right DURMA
+                    machine and configuration.
+                </p>
+
+            </div>
+
+
+            <a
+                href="mailto:evroskop@evroskop.com?subject=DURMA%20Machine%20Selection"
+                class="inline-flex shrink-0
+                       items-center justify-center
+                       rounded-lg
+                       bg-evroskop-dark
+                       px-6 py-3.5
+                       font-semibold text-white
+                       transition duration-200
+                       hover:bg-evroskop-blue"
+            >
+                Talk to a Specialist
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
     </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="/data/sheet-metal-products.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/sheet-metal-catalog.js"></script>
 
 </body>
 </html>

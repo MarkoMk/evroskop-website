@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="ESTUN industrial robot specifications and automation solutions from Evroskop Group."
+    >
+
+    <title>
+        ESTUN Robot | Evroskop Group
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/styles.css"
+    >
+
+</head>
+
+
+<body class="bg-white text-gray-900">
+
+
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
+
+<header class="border-b border-gray-200 bg-white">
+
+    <nav
+        class="mx-auto flex max-w-7xl
+               items-center justify-between
+               px-6 py-5 lg:px-8"
+        aria-label="Main navigation"
+    >
+
+        <a
+            href="/"
+            aria-label="Evroskop Group — Home"
+        >
+
+            <img
+                src="/logo.svg"
+                alt="Evroskop Group"
+                class="h-12 w-auto"
+            >
+
+        </a>
+
+
+        <div class="hidden items-center gap-8 md:flex">
+
+            <a
+                href="/robotics"
+                class="font-semibold
+                       text-evroskop-blue"
+                aria-current="page"
+            >
+                Robotics
+            </a>
+
+
+            <a
+                href="/sheet-metal"
+                class="font-semibold
+                       text-evroskop-dark
+                       transition
+                       hover:text-evroskop-blue"
+            >
+                Sheet Metal
+            </a>
+
+
+            <a
+                href="/about"
+                class="font-semibold
+                       text-evroskop-dark
+                       transition
+                       hover:text-evroskop-blue"
+            >
+                About Us
+            </a>
+
+
+            <a
+                href="/contact"
+                class="rounded-lg
+                       bg-evroskop-dark
+                       px-6 py-3
+                       font-bold text-white
+                       transition
+                       hover:bg-evroskop-blue"
+            >
+                Contact Us
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================================
+     BREADCRUMB
+     ========================================================= -->
+
+<div
+    class="mx-auto max-w-7xl
+           px-6 pt-8 lg:px-8"
+>
+
+    <nav
+        class="flex flex-wrap
+               items-center gap-2
+               text-sm text-gray-500"
+        aria-label="Breadcrumb"
+    >
+
+        <a
+            href="/"
+            class="transition
+                   hover:text-evroskop-blue"
+        >
+            Home
+        </a>
+
+
+        <span aria-hidden="true">
+            /
+        </span>
+
+
+        <a
+            href="/robotics"
+            class="transition
+                   hover:text-evroskop-blue"
+        >
+            Robotics
+        </a>
+
+
+        <span aria-hidden="true">
+            /
+        </span>
+
+
+        <span
+            id="breadcrumb-model"
+            class="text-gray-700"
+        ></span>
+
+    </nav>
+
+</div>
+
+
+
+<!-- =========================================================
+     PRODUCT HERO
+     ========================================================= -->
+
+<section
+    class="mx-auto max-w-7xl
+           px-6 py-10 lg:px-8"
+>
+
+    <div
+        class="grid gap-12
+               lg:grid-cols-[1.15fr_0.85fr]
+               lg:gap-16"
+    >
+
+
+        <!-- =================================================
+             PRODUCT IMAGE GALLERY
+             ================================================= -->
+
+        <div
+            class="grid gap-4
+                   sm:grid-cols-[90px_1fr]"
+        >
+
+            <!-- Thumbnails -->
+            <div
+                id="robot-thumbnails"
+                class="order-2 flex gap-3
+                       overflow-x-auto
+                       sm:order-1
+                       sm:flex-col"
+            ></div>
+
+
+            <!-- Main image -->
+            <div
+                class="order-1 relative
+                       overflow-hidden
+                       rounded-2xl
+                       border border-gray-200
+                       bg-gray-50
+                       sm:order-2"
+            >
+
+                <div
+                    class="flex aspect-square
+                           items-center justify-center
+                           p-8"
+                >
+
+                    <img
+                        id="robot-main-image"
+                        src=""
+                        alt=""
+                        class="h-full w-full
+                               object-contain"
+                    >
+
+                </div>
+
+
+                <!-- Previous -->
+                <button
+                    id="gallery-previous"
+                    type="button"
+                    class="absolute left-4 top-1/2
+                           z-10
+                           -translate-y-1/2
+                           text-5xl font-bold
+                           text-evroskop-dark
+                           opacity-50
+                           transition
+                           hover:opacity-100"
+                    aria-label="Previous image"
+                >
+                    ‹
+                </button>
+
+
+                <!-- Next -->
+                <button
+                    id="gallery-next"
+                    type="button"
+                    class="absolute right-4 top-1/2
+                           z-10
+                           -translate-y-1/2
+                           text-5xl font-bold
+                           text-evroskop-dark
+                           opacity-50
+                           transition
+                           hover:opacity-100"
+                    aria-label="Next image"
+                >
+                    ›
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PRODUCT INFORMATION
+             ================================================= -->
+
+        <div class="lg:pt-4">
+
+            <p
+                id="robot-category"
+                class="inline-flex
+                       rounded-full
+                       bg-evroskop-blue/10
+                       px-4 py-2
+                       text-xs font-bold
+                       uppercase
+                       tracking-[0.14em]
+                       text-evroskop-blue"
+            ></p>
+
+
+            <p
+                class="mt-6
+                       text-xs font-bold
+                       uppercase
+                       tracking-[0.2em]
+                       text-evroskop-blue"
+            >
+                ESTUN Robotics
+            </p>
+
+
+            <h1
+                id="robot-model"
+                class="mt-2 text-4xl
+                       font-bold tracking-tight
+                       text-evroskop-dark
+                       sm:text-5xl"
+            ></h1>
+
+
+            <p
+                id="robot-short-description"
+                class="mt-4 text-lg
+                       leading-8 text-gray-600"
+            ></p>
+
+
+            <p
+                id="robot-description"
+                class="mt-5
+                       leading-7 text-gray-600"
+            ></p>
+
+
+
+            <!-- Main Specs -->
+            <div
+                class="mt-8 grid grid-cols-3
+                       divide-x divide-gray-200
+                       border-y border-gray-200
+                       py-5 text-center"
+            >
+
+                <div class="px-3">
+
+                    <p
+                        id="robot-payload"
+                        class="text-2xl font-bold
+                               text-evroskop-dark"
+                    ></p>
+
+                    <p
+                        class="mt-1
+                               text-xs uppercase
+                               tracking-wide
+                               text-gray-500"
+                    >
+                        Payload
+                    </p>
+
+                </div>
+
+
+                <div class="px-3">
+
+                    <p
+                        id="robot-reach"
+                        class="text-2xl font-bold
+                               text-evroskop-dark"
+                    ></p>
+
+                    <p
+                        class="mt-1
+                               text-xs uppercase
+                               tracking-wide
+                               text-gray-500"
+                    >
+                        Reach
+                    </p>
+
+                </div>
+
+
+                <div class="px-3">
+
+                    <p
+                        id="robot-axes"
+                        class="text-2xl font-bold
+                               text-evroskop-dark"
+                    ></p>
+
+                    <p
+                        class="mt-1
+                               text-xs uppercase
+                               tracking-wide
+                               text-gray-500"
+                    >
+                        Axes
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Buttons -->
+            <div class="mt-8 grid gap-3">
+
+                <a
+                    id="robot-quote"
+                    href="#"
+                    class="inline-flex
+                           items-center justify-center
+                           rounded-lg
+                           bg-evroskop-dark
+                           px-6 py-3.5
+                           font-semibold text-white
+                           transition
+                           hover:bg-evroskop-blue"
+                >
+                    Request a Quote
+                </a>
+
+
+                <a
+                    id="robot-datasheet"
+                    href="#"
+                    class="hidden
+                           items-center justify-center
+                           rounded-lg
+                           border-2
+                           border-evroskop-dark
+                           px-6 py-3
+                           font-semibold
+                           text-evroskop-dark
+                           transition
+                           hover:bg-evroskop-dark
+                           hover:text-white"
+                >
+                    Download Datasheet
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OFFICIAL ESTUN PRODUCT INFORMATION
+     ========================================================= -->
+
+<section
+    id="estun-info-section"
+    class="hidden
+           border-t border-gray-100
+           bg-gray-50"
+>
+
+    <div
+        class="mx-auto max-w-7xl
+               px-6 py-20
+               lg:px-8 lg:py-24"
+    >
+
+        <!-- Header -->
+        <div class="max-w-3xl">
+
+            <p
+                class="text-sm font-bold
+                       uppercase
+                       tracking-[0.2em]
+                       text-evroskop-blue"
+            >
+                Official Product Information
+            </p>
+
+
+            <h2
+                class="mt-3 text-3xl
+                       font-bold tracking-tight
+                       text-evroskop-dark
+                       sm:text-4xl"
+            >
+                ESTUN
+
+                <span
+                    id="estun-info-model"
+                ></span>
+            </h2>
+
+
+            <p
+                class="mt-4 max-w-2xl
+                       text-base leading-7
+                       text-gray-600"
+            >
+                Official ESTUN product information,
+                technical parameters, operating ranges,
+                and product features.
+            </p>
+
+        </div>
+
+
+
+        <!-- Sheet -->
+        <div
+            class="mt-10 overflow-hidden
+                   rounded-2xl
+                   border border-gray-200
+                   bg-white
+                   shadow-sm"
+        >
+
+            <img
+                id="estun-info-image"
+                src=""
+                alt=""
+                class="block h-auto
+                       w-full"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DETAILS
+     ========================================================= -->
+
+<section
+    class="border-t border-gray-100
+           bg-white"
+>
+
+    <div
+        class="mx-auto max-w-7xl
+               px-6 py-20
+               lg:px-8 lg:py-24"
+    >
+
+
+        <!-- Overview / Advantages -->
+        <div
+            class="grid gap-12
+                   lg:grid-cols-[1.1fr_0.9fr]"
+        >
+
+            <!-- Overview -->
+            <div>
+
+                <p
+                    class="text-sm font-bold
+                           uppercase
+                           tracking-[0.2em]
+                           text-evroskop-blue"
+                >
+                    Overview
+                </p>
+
+
+                <h2
+                    class="mt-3 text-3xl
+                           font-bold
+                           text-evroskop-dark"
+                >
+                    Built for industrial automation.
+                </h2>
+
+
+                <p
+                    id="robot-overview"
+                    class="mt-6
+                           text-base leading-7
+                           text-gray-600"
+                ></p>
+
+            </div>
+
+
+
+            <!-- Advantages -->
+            <div
+                class="rounded-2xl
+                       border border-gray-200
+                       bg-gray-50 p-7"
+            >
+
+                <h3
+                    class="text-xl font-bold
+                           text-evroskop-dark"
+                >
+                    Key Advantages
+                </h3>
+
+
+                <ul
+                    id="robot-advantages"
+                    class="mt-5 space-y-3"
+                ></ul>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Specs / Applications -->
+        <div
+            class="mt-16 grid gap-12
+                   lg:grid-cols-2"
+        >
+
+
+            <!-- Technical specs -->
+            <div>
+
+                <h2
+                    class="text-2xl font-bold
+                           text-evroskop-dark"
+                >
+                    Technical Specifications
+                </h2>
+
+
+                <div
+                    id="robot-specifications"
+                    class="mt-6 overflow-hidden
+                           rounded-xl
+                           border border-gray-200
+                           bg-white"
+                ></div>
+
+            </div>
+
+
+
+            <!-- Applications -->
+            <div>
+
+                <h2
+                    class="text-2xl font-bold
+                           text-evroskop-dark"
+                >
+                    Typical Applications
+                </h2>
+
+
+                <div
+                    id="robot-applications"
+                    class="mt-6 flex
+                           flex-wrap gap-3"
+                ></div>
+
+
+
+                <!-- Help -->
+                <div
+                    class="mt-8 rounded-2xl
+                           bg-evroskop-dark
+                           p-8 text-white"
+                >
+
+                    <p
+                        class="text-xs font-bold
+                               uppercase
+                               tracking-[0.18em]
+                               text-white/60"
+                    >
+                        Robot Selection
+                    </p>
+
+
+                    <h3
+                        class="mt-3 text-xl
+                               font-bold"
+                    >
+                        Not sure if this is the right robot?
+                    </h3>
+
+
+                    <p
+                        class="mt-3
+                               leading-7
+                               text-white/80"
+                    >
+                        Evroskop can help determine
+                        the correct payload, reach,
+                        tooling, configuration,
+                        and automation concept
+                        for your application.
+                    </p>
+
+
+                    <a
+                        href="/contact"
+                        class="mt-6 inline-flex
+                               rounded-lg
+                               bg-white
+                               px-5 py-3
+                               font-semibold
+                               text-evroskop-dark
+                               transition
+                               hover:bg-gray-100"
+                    >
+                        Talk to Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL CTA
+     ========================================================= -->
+
+<section class="bg-evroskop-dark">
+
+    <div
+        class="mx-auto max-w-4xl
+               px-6 py-16
+               text-center lg:px-8"
+    >
+
+        <p
+            class="text-sm font-bold
+                   uppercase
+                   tracking-[0.2em]
+                   text-white/60"
+        >
+            ESTUN Robotics
+        </p>
+
+
+        <h2
+            class="mt-4 text-3xl
+                   font-bold text-white"
+        >
+            Ready to automate your application?
+        </h2>
+
+
+        <p
+            class="mx-auto mt-4
+                   max-w-xl
+                   text-base leading-7
+                   text-white/75"
+        >
+            Tell us about your process,
+            workpiece, production requirements,
+            and automation goals.
+        </p>
+
+
+        <div
+            class="mt-7 flex flex-col
+                   justify-center gap-4
+                   sm:flex-row"
+        >
+
+            <a
+                href="mailto:marko.markovski@evroskop.com?subject=Request%20for%20a%20Robot%20Quote"
+                class="inline-flex
+                       items-center justify-center
+                       rounded-lg bg-white
+                       px-6 py-3.5
+                       font-semibold
+                       text-evroskop-dark
+                       transition
+                       hover:bg-gray-100"
+            >
+                Request a Quote
+            </a>
+
+
+            <a
+                href="/robotics"
+                class="inline-flex
+                       items-center justify-center
+                       rounded-lg
+                       border border-white/40
+                       px-6 py-3.5
+                       font-semibold text-white
+                       transition
+                       hover:bg-white/10"
+            >
+                Back to Robots
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="bg-[#050b16] text-white">
+
+    <div
+        class="mx-auto grid max-w-7xl
+               gap-10 px-6 py-12
+               md:grid-cols-3
+               lg:px-8"
+    >
+
+        <!-- Brand -->
+        <div>
+
+            <img
+                src="/logo.svg"
+                alt="Evroskop Group"
+                class="h-12 w-auto
+                       brightness-0 invert"
+            >
+
+            <p
+                class="mt-5 max-w-sm
+                       text-sm leading-6
+                       text-white/55"
+            >
+                Industrial automation, robotics,
+                engineering, and sheet metal
+                machinery solutions.
+            </p>
+
+        </div>
+
+
+        <!-- Solutions -->
+        <div>
+
+            <h3
+                class="text-sm font-bold
+                       uppercase
+                       tracking-[0.1em]"
+            >
+                Solutions
+            </h3>
+
+
+            <div
+                class="mt-5 space-y-3
+                       text-sm text-white/60"
+            >
+
+                <a
+                    href="/robotics"
+                    class="block transition
+                           hover:text-white"
+                >
+                    Robotics & Automation
+                </a>
+
+                <a
+                    href="/sheet-metal"
+                    class="block transition
+                           hover:text-white"
+                >
+                    Sheet Metal Machinery
+                </a>
+
+                <a
+                    href="/about"
+                    class="block transition
+                           hover:text-white"
+                >
+                    About Us
+                </a>
+
+                <a
+                    href="/contact"
+                    class="block transition
+                           hover:text-white"
+                >
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Contact -->
+        <div>
+
+            <h3
+                class="text-sm font-bold
+                       uppercase
+                       tracking-[0.1em]"
+            >
+                Contact
+            </h3>
+
+
+            <div
+                class="mt-5 space-y-2
+                       text-sm leading-6
+                       text-white/60"
+            >
+
+                <p>
+                    Blagoja Stefkovski 182
+                </p>
+
+                <p>
+                    1040 Skopje, North Macedonia
+                </p>
+
+                <a
+                    href="tel:+38978219696"
+                    class="block transition
+                           hover:text-white"
+                >
+                    +389 78 219 696
+                </a>
+
+                <a
+                    href="tel:+38978885485"
+                    class="block transition
+                           hover:text-white"
+                >
+                    +389 78 885 485
+                </a>
+
+                <a
+                    href="mailto:evroskop@evroskop.com"
+                    class="block transition
+                           hover:text-white"
+                >
+                    evroskop@evroskop.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="border-t border-white/10">
+
+        <div
+            class="mx-auto max-w-7xl
+                   px-6 py-5
+                   text-xs text-white/40
+                   lg:px-8"
+        >
+            © 2026 Evroskop Group. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script src="/data/products.js"></script>
+<script src="/js/robot-detail.js"></script>
+
+
+</body>
+</html>
